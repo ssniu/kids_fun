@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KidsFun</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+  <div id="banner">
+    <%= image_tag("kids2.png") %>
+    <%= @page_title || "Kids Fun" %>
+  </div>
+  <div id="navbar">
+
+
+        <a href="http://www....">Home</a>
+        <a href="http://www..../reading">Reading</a>
+        <a href="http://www..../math">Math</a>
+        <a href="http://www..../artwork">Artwork</a>
+
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  
+
+</body>
+</html>
