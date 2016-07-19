@@ -1,34 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Kids_Fun</h1>
-
-<table>
-
     <% @introductions.each do |introduction| %>
       <tr>
         <td>
           <%= image_tag(introduction.image_url, class: 'list_image')%>
         </td>
-        <td class="list_description">
+        <td class="list_descriptions">
+
           <dl>
-            <dt><%= introduction.title %></dt>
-            <dd><%= truncate(strip_tags(introduction.description), length: 80)%></dd>
+            <strong><%= introduction.title %></strong>
+            <dd><%= introduction.description%></dd>
           </dl>
         </td>
-
-
-
-        <td class="list_actions">
-
-           <%= link_to 'Show', introduction %><br/>
-           <%= link_to 'Edit', edit_introduction_path(introduction) %><br>
-           <%= link_to 'Destroy', introduction, method: :delete, data:
-               { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-
-</table>
-
 <br>
 
-<%= link_to 'Next', new_introduction_path %>
+<%= link_to 'Next', new_introduction_path, class: 'btn' %>

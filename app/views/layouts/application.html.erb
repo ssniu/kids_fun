@@ -7,23 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-  <div id="banner">
+
+  <div id="banner" class="text-nowrap">
     <%= image_tag("kids2.png") %>
     <%= @page_title || "Kids Fun" %>
   </div>
-  <div id="navbar">
+  <div class="navbar" >
+    <div class="navbar-inner">
+      <div class="container">
 
+        <a href="http://www...." class="btn btn-default btn-lg active">Home</a>
+        <a href="http://www..../reading" class="btn btn-default btn-lg active dropdown-toggle">Reading</a>
+        <a href="http://www..../math" class="btn btn-default btn-lg active" >Math</a>
+        <a href="http://www..../artwork" class="btn btn-default btn-lg active" >Artwork</a>
+        <a href="http://www..../authentication" class="btn btn-default btn-lg active" >Sign in/Sign up</a>
 
-        <a href="http://www....">Home</a>
-        <a href="http://www..../reading">Reading</a>
-        <a href="http://www..../math">Math</a>
-        <a href="http://www..../artwork">Artwork</a>
-
+      </div>
     </div>
-    <div id="main">
+  </div>
+
+
+
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
-  
+
 
 </body>
 </html>

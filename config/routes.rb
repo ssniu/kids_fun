@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
+  
+  devise_for :users
+  get 'admin/index'
+
+  get 'session/new'
+
+  get 'session/create'
+
+  get 'session/destroy'
+
   resources :introductions
+  root to: 'introductions#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

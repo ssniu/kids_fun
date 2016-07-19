@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
  #banner {
    background: #9c9;
-   padding: 10px;
-   border-bottom: 1px solid;
+   padding: 8px;
+
    font: small-caps 130px/130px "Times New Roman", serif;
    color: #282;
    text-align: center;
@@ -32,12 +33,13 @@
    background: #9c9;
    padding: 6px;
    font: small-caps 20px/20px "Times New Roman", serif;
-   
+
    text-align: center;
-   #main {
+   body {
      margin-left: 17em;
-     padding: 1em;
+     padding-top: 40px;
      background: white;
 
    }
+  
  }
