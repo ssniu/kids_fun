@@ -2,9 +2,9 @@
 
 #### Prerequisities
 
-..* Ruby on Rails
-..* [Bootstrap](http://getbootstrap.com)
-..* [Devise](https://github.com/plataformatec/devise)
+* Ruby on Rails
+* [Bootstrap](http://getbootstrap.com)
+* [Devise](https://github.com/plataformatec/devise)
 
 #### Installing
 
@@ -12,4 +12,4 @@ Follow the links to install Bootstrap & Devise
 
 #### Port
 
-[kids_fun](http://localhost:3000)
+http://localhost:3000
