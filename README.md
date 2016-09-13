@@ -16,6 +16,20 @@
 
 Follow the links to install Bootstrap & Devise
 
+#### Steps
+
+Create new rails project
+
+``` ruby
+rails new Kidsfun
+
+```
+Using scaffold to generate models, view and controller
+
+``` ruby
+rails generate scaffold Produce title:string image_url:string price:decimal
+```
+
 #### Port
 
 http://localhost:3000
