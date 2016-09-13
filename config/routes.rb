@@ -1,6 +1,28 @@
 Rails.application.routes.draw do
-  
-  devise_for :users
+
+  get 'artwork/ideas'
+
+  get 'artwork/myproject'
+
+  get 'math/grade1'
+
+  get 'math/grade2'
+
+  get 'reading/grade1'
+
+  get 'reading/grade2'
+
+  get 'appsession/create'
+
+  get 'appsession/destroy'
+
+  get 'session/create'
+
+  get 'session/destroy'
+
+  get 'homepage/show'
+
+  devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
   get 'admin/index'
 
   get 'session/new'
@@ -11,6 +33,10 @@ Rails.application.routes.draw do
 
   resources :introductions
   root to: 'introductions#index'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

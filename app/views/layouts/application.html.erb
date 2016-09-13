@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+  <div>
+    <% if current_user %>
+      Signed in as <strong><%= current_user.name %></strong>!
+      <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+      <%= link_to "Sign in with Twitter", user_twitter_omniauth_authorize_path(:twitter) %>
+
+    <% end %>
+  </div>
 
   <div id="banner" class="text-nowrap">
     <%= image_tag("kids2.png") %>
@@ -18,14 +27,13 @@
 
            <ul class="nav nav-tabs">
               <li role="presentation" class="active"><%= link_to "Home", introductions_path %></li>
-
               <li role="presentation" class="dropdown">
                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                  aria-haspopup="true" aria-expanded="false">Reading<span class="caret"></span>
                </a>
                 <ul class="dropdown-menu">
-                   <li><a href="#">Grade 1</li></a>
-                   <li><a href="#">Grade 2</li></a>
+                  <li><%= link_to "Grade 1", reading_grade1_path %></li>
+                  <li><%= link_to "Grade 2", reading_grade2_path %></li>
                 </ul>
               </li>
 
@@ -34,8 +42,8 @@
                    aria-haspopup="true" aria-expanded="false">Math<span class="caret"></span>
                  </a>
                   <ul class="dropdown-menu">
-                     <li><a href="#">Grade 1</li></a>
-                     <li><a href="#">Grade 2</li></a>
+                    <li><%= link_to "Grade 1", math_grade1_path %></li>
+                    <li><%= link_to "Grade 2", math_grade2_path %></li>
                   </ul>
               </li>
 
@@ -44,11 +52,18 @@
                 aria-haspopup="true" aria-expanded="false">Artwork<span class="caret"></span>
               </a>
                <ul class="dropdown-menu">
-                  <li><a href="#">Grade 1</li></a>
-                  <li><a href="#">Grade 2</li></a>
+                  <li><%= link_to "Ideas", artwork_ideas_path %></li>
+                  <li><%= link_to "Myproject", artwork_myproject_path %></li>
                </ul>
              </li>
-           </ul>
+
+
+           <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
 
            <ul class="nav pull-right">
              <li class="dropdown">
@@ -65,10 +80,10 @@
                 </ul>
               </li>
             </ul>
+      </ul>
       </div>
     </div>
   </div>
-
 
 
     <div class="container">
@@ -76,6 +91,31 @@
        <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
+
+
+   <footer class="Footer Footer-global">
+     <nav class="Footer-navigation">
+       <ul class="Footer-navigation">
+         <li class="Footer-navigation-item">
+           <a href="#" class="FootItem">About</a>
+         </li>
+       </ul>
+
+     </nav>
+     <div class="Footer-copyright">@2016 Kids_fun </div>
+   </footer>
+    <!-- <div class="container">
+
+         <li>
+           <a href="#">Contact us</a>
+           <a href="#">About</a>
+        </li>
+    <p>
+      "Designed and built for rail demo practice."
+    </p>
+</div>
+</footer> -->
+
 
 
 </body>

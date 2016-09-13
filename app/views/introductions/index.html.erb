@@ -1,19 +1,51 @@
-<p id="notice"><%= notice %></p>
-
-    <% @introductions.each do |introduction| %>
-      <tr>
-        <td>
-          <%= image_tag(introduction.image_url, class: 'list_image')%>
-        </td>
-        <td class="list_descriptions">
-
-          <dl>
-            <strong><%= introduction.title %></strong>
-            <dd><%= introduction.description%></dd>
-          </dl>
-        </td>
-      </tr>
-    <% end %>
-<br>
-
-<%= link_to 'Next', new_introduction_path, class: 'btn' %>
+<div class="page-header">
+  <h1>Make learning fun for kids</h1>
+</div>
+<div class="jumbotron">
+  <h2>Reading</h2>
+  <p>
+    Reading (<a href="https://en.wikipedia.org/wiki/Reading_(process)">Wiki</a>)
+    is a means of language acquisition, communication,
+    and of sharing information and ideas. Like all languages,
+    it is a complex interaction between the text and the reader
+    which is shaped by the reader’s prior knowledge, experiences,
+    attitude, and language community which is culturally and socially
+    situated. The reading process requires continuous practice, development,
+    and refinement. In addition, reading requires creativity and critical analysis.
+  </p>
+  <p>
+    <a href="#" class="btn btn-primary btn-lg" role="button">Learn more</a>
+  </p>
+</div>
+<div class="jumbotron">
+  <h2>Math</h2>
+  <p>
+    Mathmatics (<a href="https://en.wikipedia.org/wiki/Mathematics">Wiki</a>)
+    is essential in many fields, including natural science,
+    engineering, medicine, finance and the social sciences.
+    Applied mathematics has led to entirely new mathematical
+    disciplines, such as statistics and game theory. Mathematicians
+    also engage in pure mathematics, or mathematics for its own sake,
+    without having any application in mind. There is no clear line separating
+    pure and applied mathematics, and
+    practical applications for what began as pure mathematics are often discovered.
+  </p>
+  <p>
+    <a href="#" class="btn btn-primary btn-lg" role="button">Learn more</a>
+  </p>
+</div>
+<div class="jumbotron">
+  <h2>Art</h2>
+  <p>
+    Art (<a href="https://en.wikipedia.org/wiki/Mathematics">Wiki</a>)
+    is a diverse range of human activities in creating visual, 
+    auditory or performing artifacts (artworks), expressing the
+    author's imaginative or technical skill, intended to be appreciated
+    for their beauty or emotional power.[1][2] In their most general form
+    these activities include the production of works of art, the criticism
+    of art, the study of the history of art, and the aesthetic dissemination of art.
+  </p>
+  <p>
+    <a href="#" class="btn btn-primary btn-lg" role="button">Learn more</a>
+  </p>
+</div>
