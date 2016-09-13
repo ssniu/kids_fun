@@ -6,7 +6,7 @@
 ##### Drop-down menu 
 ![alt text](https://cloud.githubusercontent.com/assets/14773835/18457738/1946e242-7929-11e6-8fc8-ce6909f66daf.png)
 ##### Authentication
-![alt text])https://cloud.githubusercontent.com/assets/14773835/18457760/7352410a-7929-11e6-83f4-dbdd91246030.png)
+![alt text](https://cloud.githubusercontent.com/assets/14773835/18457760/7352410a-7929-11e6-83f4-dbdd91246030.png)
 
 #### Prerequisities
 
