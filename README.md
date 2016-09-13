@@ -1,5 +1,8 @@
 # Rails project: kids_fun
 
+### App images
+https://cloud.githubusercontent.com/assets/14773835/18457619/57d67cb2-7928-11e6-9c21-0c22e8c1f414.png
+
 #### Prerequisities
 
 * Ruby on Rails
